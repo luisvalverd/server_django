@@ -1,0 +1,19 @@
+{% include "layouts/header.html" %}
+
+<div>
+    {% if list_products %}
+    <ul>
+        {% for product in list_products %}
+        <li>
+            <label>{{ product.name }}</label>
+            <p>{{ product.description }} <br> {{ product.price }}</p>
+            <label>{{ product.stock }}</label>
+            <a href="/product/{{product.id}}/delete">Delete</a>
+            <a href="/product/{{product.id}}/update">update</a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</div>
+
+{% include "layouts/footer.html" %}

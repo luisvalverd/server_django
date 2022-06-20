@@ -1,0 +1,9 @@
+{% include "layouts/header.html" %}
+
+<form method="post">
+    {% csrf_token %}
+    <p>Are you sure want to delete {{ object.name }}</p>
+    <input type="submit" value="Confirm">
+</form>
+
+{% include "layouts/footer.html" %}
